@@ -1,0 +1,232 @@
+
+/*Variables*/
+
+:root {
+    --primary-color: rgb(74, 74, 74);
+    --secondary-color: rgb(247, 233, 129);
+    --light-grey: rgb(113, 112, 112);
+}
+
+body *{
+    box-sizing: border-box;   
+    font-family: 'Raleway', sans-serif;
+    color: var(--primary-color);
+}
+
+
+/* Texts */
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
+}
+h1 {
+    font-size: 31px;
+}
+h2 {
+    font-size: 28px;
+}
+h3 {
+    font-size: 24px;
+}
+h4 {
+    font-size: 19px;
+}
+h5 {
+    font-size: 17px;
+}
+p {
+    font-size: 14px;
+}
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: .5em;
+    flex-wrap: wrap;
+}
+    /*logo*/
+.logo-link {
+    text-decoration: none;
+    flex-basis: calc(100% - 24px);
+}
+.logo {
+    display: flex;
+}
+.fa-sun {
+    padding: 0.25em;
+    padding-left:0;
+    font-size: 30px;
+}
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5em;
+}
+.logo-name {
+    font-size: 19px;
+    font-family: 'Playfair Display', serif;    
+}
+.logo-job-title {
+    font-size: 13px; 
+    font-family: 'Raleway', sans-serif;    
+}
+    /*Nav links*/
+#menu-toggle + #nav-links {
+    display: none;
+}
+#menu-toggle:checked + #nav-links {
+    display: block;
+    background-color: var(--secondary-color);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 2em;
+}
+#nav-links ul {
+    list-style: none;
+    padding: 1em 2em;
+}
+#nav-links li {
+    padding-top: 1em;
+    font-family:'Playfair Display', serif;
+    font-size: 22px;
+    text-align: center;
+}
+#nav-links a:active {
+    color: var(--light-grey);
+}
+#menu-toggle {
+    display: none;
+}
+.fa-bars, 
+.fa-times {
+    font-size: 1.5em;    
+}
+.menu-icon-times {
+    display: block;
+    margin-left: auto 0;
+}
+
+    /*Social media*/
+#social-media {
+    display: flex;
+    padding-left: 0;
+    font-size: 14px;
+}
+#social-media li {
+    list-style: none;
+    margin-left: 1em;
+}
+#social-media li:first-child {
+    margin-left: 0;
+}
+
+/* HEADER: desktop */
+
+@media only screen and (min-width: 768px) {
+    header {
+        flex-wrap: nowrap;
+    }
+    .logo-link {
+        flex-basis: auto;
+        flex-grow: 1;
+    }
+    .menu-container {
+        margin-right: 5em;
+    }
+    #menu-toggle + #nav-links {
+        display: flex;
+        padding-top: 0;
+        background-color: #fff;
+        width: 100%;
+    }
+    .fa-bars, 
+    .fa-times {
+        display: none;
+    }
+    #nav-links ul {
+        display: flex;
+        margin: 0;
+        padding: 0;  
+    }
+    #nav-links li {
+        padding-top: 0;
+        font-size: 14px;
+        margin-left: 2em;
+        font-family: 'Raleway', sans-serif;
+    }
+}
+
+/* Buttons */
+button {
+    background-color: var(--primary-color);
+    border: .5px solid var(--primary-color);
+    color: #fff;
+    font-size: 14px;
+    padding: 1em 2em;
+    transition: all 240ms ease-in;
+}
+button:hover  {
+    opacity: 0.6;
+}
+button.secondary-btn {
+    background-color: #fff;
+    color: var(--primary-color);
+}
+button.secondary-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    opacity: 1;
+}
+button.book-btn {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+button.book-btn:hover {
+    opacity: 1;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/*Forms*/
+form {
+    display: flex;
+    flex-direction: column; 
+    width: 90%; 
+    max-width: 90%;
+    margin: 0 auto;
+}
+input[type="text"],
+textarea {
+    padding: 0.5em 1em;
+    font-size: 14px;
+    margin-bottom: 0.75em;
+    border: 1px solid var(--primary-color);
+}
+input[type="text"]:focus::placeholder,
+textarea:focus::placeholder {
+    color: transparent;
+}
+form label {
+    color: var(--light-grey);
+    margin: 1em 1em 1em 0;
+}
+#enter-email {
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+}
+button.newsletter-button {
+    min-width: 120px;
+    margin: 0 auto;
+}
+
+/* 2. Move cross (mobile menu) to the right hand side --> cant' stop the label from taking up the full width of the screen
+   3. Do hover effects on desktop menu  
+
+*/  
