@@ -7,19 +7,19 @@
     --light-grey: rgb(113, 112, 112);
     --green: rgb(211, 196, 19);
 }
-
+body {
+    padding: 0;
+    margin: 0;
+}
 body *{
     box-sizing: border-box;   
     font-family: 'Raleway', sans-serif;
     color: var(--primary-color);
 }
-
 @media only screen and (min-width: 768px) {
-    body {
-        width: 80%;
-        margin: 0 auto;
+    main {
+        padding: 0 10%;
     }
-    
 }
 
 /* Texts */
@@ -29,6 +29,8 @@ h3,
 h4 {
     font-family: 'Playfair Display', serif;
     font-weight: normal;
+    text-align: center;
+    margin-top: 0;
 }
 h1 {
     font-size: 31px;
@@ -53,7 +55,7 @@ header {
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    padding: .5em;
+    padding: 1em .5em;
     flex-wrap: wrap;
 }
     /*logo*/
@@ -116,7 +118,6 @@ header {
 .fa-times {
     font-size: 1.5em;    
 }
-
 #menu-icon-times {
     display: block;
     margin-left: 90%;
@@ -127,6 +128,8 @@ header {
     display: flex;
     padding-left: 0;
     font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 14px;
 }
 #social-media li {
     list-style: none;
@@ -141,7 +144,7 @@ header {
 @media only screen and (min-width: 768px) {
     header {
         flex-wrap: nowrap;
-        padding: 3em 0;
+        padding: 0 10%;
     }
     .logo-link {
         flex-basis: auto;
@@ -184,10 +187,10 @@ header {
         color: var(--light-grey);
     }
     #nav-links a:active {
-        color: #D3C413;
+        color: red;
     }
     #nav-links a:visited {
-        color: #9D6381;
+        color: blue;
     }
 }
 
@@ -216,10 +219,10 @@ header {
 /* Buttons */
 button {
     background-color: var(--primary-color);
-    border: .5px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
     color: #fff;
     font-size: 14px;
-    padding: .75em 2em;
+    padding: .75em 1.25em;
     transition: all 240ms ease-in;
 }
 button:hover  {
@@ -277,5 +280,4 @@ button.newsletter-button {
 }
 
 /* 
-  1. how do i make the footer not have space around it?
 */  

@@ -1,0 +1,30 @@
+.hero-photo {
+    object-fit: cover;
+    height: 320px;
+    width: 100%;
+    display: block; 
+}
+.hero-text {
+    background-color: var(--yellow);
+    text-align: center;
+    padding: 2em 2em;
+}
+
+.intro {
+    padding: 2em 1em 1em;
+   
+}
+.intro h2 {
+    margin-bottom: 0;
+}
+.intro h4 {
+    margin-top: .75em;
+}
+.intro p {
+    text-align: left;
+    line-height: 1.75;
+}
+.intro .secondary-btn {
+    margin: 0 auto;
+    display: block;
+}
