@@ -299,4 +299,13 @@ button.newsletter-button {
 }
 
 
-
+/*gallery*/
+#gallery {
+    column-count:2;
+    column-gap: 0;
+    
+}
+#gallery img {
+    width: 100%;
+    height: auto;
+}

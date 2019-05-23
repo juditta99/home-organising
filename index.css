@@ -78,6 +78,10 @@
 }
 
 /*SERVICES*/
+
+.services {
+padding-bottom: 2em;
+}
 .my-services-list {
     display: flex;
     flex-direction: column;
@@ -104,11 +108,15 @@
     margin:0;
     padding: 2em;
 }
-
+.services button {
+    margin: 0 auto;
+    display: block;
+}
 @media only screen and (min-width: 768px) {
     .my-services-list {
         flex-direction: row;
         justify-content: space-between;
+        padding-bottom: 4em;
     }
     .home-organising {
         width: 31%;
@@ -133,8 +141,86 @@
     }
 }
 
-/* 
-Sections layout (size of font, colour of h3 background, more white space in intro)
-1. What screen breaks should I do?
+/* PHOTO GALLERY*/
+.clients-homes {
+    padding: 2em 0;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.gallery-image {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0.2px;
+}
+.gallery-image img {
+    width: 100%;
+}
 
-*/
+/* TESTIMONIALS*/
+.testimonials-section {
+    text-align: center;
+    padding: 2em 0;
+}
+.all-testimonials {
+    display: flex;
+    flex-direction: column;
+}
+.testimonial-block {
+    background-color: #D2B8C5;
+    padding: 1em;
+    line-height: 2;
+}
+.testimonial-block span {
+    font-family: 'Playfair Display', serif;
+}
+
+.testimonial-block p {
+    margin-bottom: 0.5em;
+}
+@media only screen and (min-width: 768px) {
+    .all-testimonials { 
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 100%; 
+    }
+    .testimonial-block {
+        max-width: 32%;
+        padding: 5% 1.5em;
+        height: 300px;  
+        line-height: 2;
+        text-align: center; 
+        align-content: center;        
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .testimonial-block {
+        height: 250px;
+        padding: 4% 1em;
+    }
+}
+
+/*NEWSLETTER*/
+.newsletter {
+    padding-bottom: 2em;
+}
+@media only screen and (min-width: 768px) {
+    .newsletter h3 {
+        max-width: 40%;
+        margin: 1em auto;
+    }
+}
+
+
+/* 
+1. Make photo gallery with grid (in scratchpad)
+2. What screen breaks should I do?
+3. On wix an h3 in mobile becomes an h2 in desktop (line 61, HTML). What should I do? 
+4. I don't understand the padding percentage in hero (line 38) and testimonial (line 193)
+
+To do
+1. Testimonials height on desktop
+2. image gallery */
