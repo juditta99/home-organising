@@ -6,6 +6,7 @@
     --yellow: rgb(247, 252, 174);
     --light-grey: rgb(113, 112, 112);
     --green: rgba(200, 214, 23, .7);
+    --services-green: rgba(58, 183, 149, .6)
 }
 body {
     padding: 0;
@@ -152,9 +153,19 @@ header {
 #social-media li {
     list-style: none;
     margin-left: 1em;
+    cursor: pointer;
 }
 #social-media li:first-child {
     margin-left: 0;
+}
+.fa-facebook-f:active {
+    color: rgb(60,90,153);
+}
+.fa-twitter:active {
+    color: rgb(0, 172, 237);
+}
+.fa-linkedin-in:active {
+    color: rgb(0,119,181);
 }
 
 /* HEADER: desktop */
@@ -206,11 +217,22 @@ header {
         color: var(--light-grey);
     }
     #nav-links a:active {
-        color: red;
+        color: rgba(58, 183, 149, .6);
     }
-    #nav-links a:visited {
-        color: blue;
+
+    #social-media {
+        margin-top: 0;
     }
+    .fa-facebook-f:hover {
+        color: rgb(60,90,153);
+    }
+    .fa-twitter:hover {
+        color: rgb(0, 172, 237);
+    }
+    .fa-linkedin-in:hover {
+        color: rgb(0,119,181);
+    }
+
 }
 
 /* FOOTER */
@@ -257,8 +279,10 @@ button.secondary-btn:hover {
     opacity: 1;
 }
 button.book-btn {
-    background-color: var(--yellow);
+    background-color: var(--services-green);
     color: var(--primary-color);
+    width: 100%;
+    margin: 0 auto;
 }
 button.book-btn:hover {
     opacity: 1;
@@ -285,6 +309,11 @@ input[type="text"]:focus::placeholder,
 textarea:focus::placeholder {
     color: transparent;
 }
+input[type="text"]::placeholder,
+textarea::placeholder {
+    color: rgb(145, 144, 144);
+}
+
 form label {
     color: var(--light-grey);
     margin: 1em 1em 1em 0;
@@ -296,6 +325,11 @@ form label {
 button.newsletter-button {
     min-width: 120px;
     margin: 0 auto 1em auto;
+}
+@media only screen and (min-width: 768px) {
+    form {
+        max-width: 70%;
+    }
 }
 
 

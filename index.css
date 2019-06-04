@@ -137,7 +137,7 @@ padding-bottom: 2em;
         background-position: center;
     }
     .services h4 {
-        background-color: rgba(58, 183, 149, .6);
+        background-color: var(--services-green);
     }
 }
 
@@ -172,14 +172,14 @@ padding-bottom: 2em;
 .testimonial-block {
     background-color: #D2B8C5;
     padding: 1em;
-    line-height: 2;
+    line-height: 1.5;
 }
 .testimonial-block span {
     font-family: 'Playfair Display', serif;
 }
 
 .testimonial-block p {
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 @media only screen and (min-width: 768px) {
     .all-testimonials { 
@@ -188,12 +188,16 @@ padding-bottom: 2em;
         max-width: 100%; 
     }
     .testimonial-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         max-width: 32%;
         padding: 5% 1.5em;
-        height: 300px;  
-        line-height: 2;
-        text-align: center; 
-        align-content: center;        
+        height: 300px;
+        align-content: center; 
+    }
+    .testimonial-block p{
+        margin-top: 0;
     }
 }
 @media only screen and (min-width: 1024px) {
